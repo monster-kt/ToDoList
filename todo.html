@@ -1,0 +1,172 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: surui
+ * @Date: 2021-01-29 14:26:46
+ * @LastEditors: surui
+ * @LastEditTime: 2021-01-30 20:44:33
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList——最简单的待办事项列表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li,
+        ol {
+            list-style: none;
+        }
+
+        input {
+            outline: none;
+        }
+
+        body {
+            background-color: #CCCDCC;
+        }
+
+        .w {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            background-color: #303130;
+        }
+
+        .nav {
+            display: flex;
+            height: 50px;
+            line-height: 50px;
+            align-items: center;
+        }
+
+        .nav h3 {
+            flex: 1;
+            color: #D8DED8;
+        }
+
+        .nav input {
+            flex: 1;
+            height: 25px;
+            padding-left: 10px;
+            border-radius: 7px;
+            background-color: #FDFEFD;
+            color: black;
+        }
+
+        section div[class$="til"] {
+            display: flex;
+            margin-top: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        section div[class$="til"] h2 {
+            flex: 1;
+        }
+
+
+        section div[class*='it'] {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #E7E6FB;
+        }
+
+        .ing ul,
+        .fin ul {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .ing ul li,
+        .fin ul li {
+            display: flex;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            border-left: 5px solid #5E959B;
+            padding-left: 10px;
+        }
+
+        .fin ul li {
+            background-color: #E4E6E4;
+        }
+
+        footer {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        li input {
+            margin: 7px;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        li p {
+            flex: 1;
+        }
+
+        li a {
+            margin: 5px;
+            display: block;
+            width: 14px;
+            height: 12px;
+            border-radius: 14px;
+            border: 6px double #FFF;
+            background: #CCC;
+            line-height: 14px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="todolist.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav w">
+            <h3>ToDoList</h3>
+            <input type="text" placeholder="添加ToDo" id="title">
+        </div>
+    </nav>
+    <section class="ing w">
+        <div class="ing-til">
+            <h2>正在进行</h2>
+            <div class="ing-it">0</div>
+        </div>
+        <ul class="todolist">
+        </ul>
+    </section>
+    <section class="fin w">
+        <div class="fin-til">
+            <h2>已经完成</h2>
+            <div class="fin-it">0</div>
+        </div>
+        <ul class="donelist">
+        </ul>
+    </section>
+    <footer>
+        Copyright &copy; 2014 todolist.cn
+    </footer>
+</body>
+
+</html>
